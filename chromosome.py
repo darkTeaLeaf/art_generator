@@ -9,6 +9,10 @@ class Chromosome:
         img.load()
         self.image_array = np.asarray(img, dtype="int32")
         self.fitness_score = 0
+        num = 0
+        for i in self.image_array:
+            num += len(i)
+        self.pix_num = num
 
     def count_color_num(self):
         color_array = []
