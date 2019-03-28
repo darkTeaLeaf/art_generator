@@ -1,24 +1,22 @@
-# from PIL import Image
-# import numpy as np
-from chromosome import Chromosome
 import genetic_algorithm
 
+image_name = 'C:\\Users\\Dell\\Desktop\\My disk\\Sketches\\init2.jpg'
+final_name = 'C:\\Users\\Dell\\Desktop\\My disk\\Sketches\\final2.jpg'
+iterations_num = 3
 
-# def load_image(file_name):
-#     img = Image.open(file_name)
-#     img.load()
-#     data = np.asarray(img, dtype="int32")
-#     return data
-#
-#
-# def save_image(np_data, out_file_name):
-#     img = Image.fromarray(np_data, "RGB")
-#     img.save(out_file_name)
+genetic_algorithm.generate_init_pop(image_name)
 
+for i in range(1, iterations_num + 1):
+    genetic_algorithm.fitness_function()
 
-# print(load_image('C:\\Users\\Dell\\Desktop\\My disk\\Sketches\\751px-VanGogh-starry_night.jpg'))
+    genetic_algorithm.selection_function()
 
-ch = Chromosome('C:\\Users\\Dell\\Desktop\\My disk\\Sketches\\9px_image.jpg')
-print(ch.image_array)
-genetic_algorithm.change_color(ch, 0, 1)
-print(ch.image_array)
+    genetic_algorithm.crossover()
+
+    genetic_algorithm.mutation()
+
+    print('End of ' + str(i) + ' iteration')
+
+result = genetic_algorithm.termination()
+# result = Chromosome(image_name)
+result.save_image(final_name)

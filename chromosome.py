@@ -1,3 +1,4 @@
+import numpy
 from PIL import Image
 import numpy as np
 
@@ -25,3 +26,8 @@ class Chromosome:
                 if append:
                     color_array.append(j)
         self.fitness_score = len(color_array)
+
+    def save_image(self, out_file_name):
+        array = np.array(self.image_array, dtype=numpy.uint8)
+        img = Image.fromarray(array)
+        img.save(out_file_name)
