@@ -1,6 +1,7 @@
-from PIL import Image
-import numpy as np
+# from PIL import Image
+# import numpy as np
 from chromosome import Chromosome
+import genetic_algorithm
 
 
 # def load_image(file_name):
@@ -19,6 +20,5 @@ from chromosome import Chromosome
 
 ch = Chromosome('C:\\Users\\Dell\\Desktop\\My disk\\Sketches\\9px_image.jpg')
 print(ch.image_array)
-ch.count_color_num()
-print(ch.fitness_score)
-print(ch.pix_num)
+genetic_algorithm.change_color(ch, 0, 1)
+print(ch.image_array)
