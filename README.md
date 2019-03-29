@@ -1,4 +1,4 @@
-# Art generator based Genetic algorithm
+# Art generator based on Genetic algorithm
 Problem formulation: given several test input images of 512x512 pixels. It needs to produce via any evolutionary algorithm
 another 512x512 from a single test image your computational artist. 
 
