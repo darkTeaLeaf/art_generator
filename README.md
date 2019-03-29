@@ -25,16 +25,30 @@ For the current implementation, each population consists of 3 (number can be cha
 The first population is generated from copies of picture which is given initially. 
 
 ## Fitness function
-To determine that picture is pixelized enoungh we need to count how much it has different colors. </br>
-At fisrt, number of colors whcih we want on picture (can be assumed as a level of result image detalization, 
-less colors lead to less detalization) is set. Then algorithm counts how much unique colors in each chromosome and this number becomes 
-a fitness score for a chromosome.
+To determine that picture is pixelized enough we need to count how much it has different colours. </br>
+At first, a number of colours which we want on the picture (can be assumed as a level of result image detailing, fewer colours lead to less detailing) is set. Then algorithm counts how much unique colours in each chromosome and this number becomes a fitness score for a chromosome.
 
 ## Selection function
-In this part of algorithm, we choose two chromosomes with fitness scores which are closest to number of color we want. 
-Choosed ones will be the best in the population and become parents for the future population. 
+In this part of the algorithm, we choose two chromosomes with fitness scores which are closest to the number of colours we want. 
+Chosen ones will be the best in the population and become parents for the future population. 
 
 ## Crossover
-At the moment we need to generate the whole new population which will have equal parts from parents selectes on the previous step. 
-For this purpose algorithm takes randomly a half of all pixels from one parent and the next half from the second, therefore 
-necessary amount of different chromosomes in the new population is generated.
+At the moment we need to generate the whole new population which will have equal parts from parents selected on the previous step. 
+For this purpose, the algorithm takes randomly a half of all pixels from one parent and the next half from the second, therefore 
+the necessary amount of different chromosomes for the new population is generated.
+
+## Mutation
+To achieve the main purpose of the algorithm we need to change colours of pixels somehow. A decreasing number of unique colours on a picture can be reached by changing the colour of pixel to colour of another pixel which is close to the first one. 
+The algorithm uses this strategy: goes through eight pixels which border to initial, determines the pixel with closest colour and changes colour initial to it. The process is applied to random pixels of each chromosome in population.  
+
+# Testing on different inputs
+The first on was the picture (200x125) of "The Birth of Venus" by Sandro Botticelli. And you can see result after 5 iterations with color number 50, 3 chromosomes in population.
+
+![Initial picture](https://i.ibb.co/V2ZwD9p/init.jpg)
+![Result picture](https://i.ibb.co/SyPtpWh/final.jpg)
+
+According to initial task, we need to test algorithm on image 512x512. So, here it is the picture of cute cats :3 </br>
+Using 6 iterations, color number 50, 3 chromosomes in population we got the following result (see picture below).
+
+![Initial picture](https://i.ibb.co/F3fC1tv/init4.jpg)
+
