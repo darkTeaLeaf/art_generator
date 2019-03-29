@@ -19,6 +19,7 @@ Genetic algorithm goes through the following steps:
 * selection function (choose the best chromosomes according to fitness score)
 * crossover (merge two best chromosomes to produce new population)
 * mutation (add some noise to new population)
+* termination (finish iterations and choose the best chromosome from the last population)
 
 ## Initialization of the first population
 For the current implementation, each population consists of 3 (number can be changed) images as chromosomes with pixels as genes.
