@@ -52,4 +52,5 @@ According to initial task, we need to test algorithm on image 512x512. So, here 
 Using 6 iterations, color number 50, 3 chromosomes in population we got the following result (see picture below).
 
 ![Initial picture](https://i.ibb.co/F3fC1tv/init4.jpg)
+![Result picture](https://i.ibb.co/SrPFpfW/final4.jpg)
 
