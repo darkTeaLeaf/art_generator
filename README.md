@@ -43,7 +43,7 @@ To achieve the main purpose of the algorithm we need to change colours of pixels
 The algorithm uses this strategy: goes through eight pixels which border to initial, determines the pixel with closest colour and changes colour initial to it. The process is applied to random pixels of each chromosome in population.  
 
 # Testing on different inputs
-The first on was the picture (200x125) of "The Birth of Venus" by Sandro Botticelli. And you can see result after 5 iterations with color number 50, 3 chromosomes in population.
+The first one was the picture (200x125) of "The Birth of Venus" by Sandro Botticelli. And you can see result after 5 iterations with color number 50, 3 chromosomes in population.
 
 ![Initial picture](https://i.ibb.co/V2ZwD9p/init.jpg)
 ![Result picture](https://i.ibb.co/SyPtpWh/final.jpg)
