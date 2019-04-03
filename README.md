@@ -54,3 +54,9 @@ Using 6 iterations, color number 50, 3 chromosomes in population we got the foll
 ![Initial picture](https://i.ibb.co/F3fC1tv/init4.jpg)
 ![Result picture](https://i.ibb.co/SrPFpfW/final4.jpg)
 
+Another one picture (512x512) for algorithm and result after 30 iterations (color number 20, 3 chromosomes).
+
+![Initial picture](https://cdn1.savepice.ru/uploads/2019/4/4/7306a858107ef5dd3d355fe732912fe1-full.jpg)
+![Result picture](https://cdn1.savepice.ru/uploads/2019/4/4/bdc00a8832e6ff401fbb62f23a064772-full.jpg)
+
+
