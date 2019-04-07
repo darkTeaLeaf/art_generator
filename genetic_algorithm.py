@@ -3,12 +3,11 @@ import random
 
 pop_num = 3
 population = []
-color_num = 50
+color_num = 20
 parents = []
 
 
 def generate_init_pop(file_name):
-    # TODO
     for i in range(1, pop_num + 1):
         chromosome = Chromosome(file_name)
         population.append(chromosome)
@@ -52,7 +51,7 @@ def mutation():
     for chromosome in population:
         new_chromosome = chromosome
         population.remove(chromosome)
-        for k in range(1, int(chromosome.pix_num) + 1):
+        for k in range(1, int(chromosome.pix_num / 2) + 1):
             i = random.randint(0, len(chromosome.image_array) - 1)
             j = random.randint(0, len(chromosome.image_array[0]) - 1)
             change_color(chromosome, new_chromosome, i, j)
